@@ -20,7 +20,7 @@ export default function Flashcards() {
 
             if (docSnap.exists()) {
                 const collections = docSnap.data().flashcards || []
-                console.log(collections)
+                /*console.log(collections)*/
                 setFlashcards(collections)
             } else {
                 await setDoc(docRef, { flashcards: [] })

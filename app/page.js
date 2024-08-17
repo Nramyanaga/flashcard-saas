@@ -6,7 +6,7 @@ import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import { loadStripe } from '@stripe/stripe-js'; // Make sure this is imported
 
 // Make sure to replace with your actual Stripe public key
-const stripePromise = loadStripe('your-publishable-key-here'); 
+const stripePromise = loadStripe('pk_test_51PnmgSFLF3poaRuyzeICC3rPAYKFUIN2IKWqfCp0a80vfRSYEYt8ETdLN1fSeKVIP0F76oAOjo23zWbJ8oxWytza00BAgXNah4');
 
 export default function Home() {
 
@@ -50,7 +50,7 @@ export default function Home() {
 
       <AppBar position="static" sx={{ width: '100%' }}>
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>Flashcard SaaS</Typography>
+          <Typography variant="h6" sx={{ flexGrow: 1 }}>Recall</Typography>
           <SignedOut>
             <Button color="inherit" href="/sign-in">Login</Button>
             <Button color="inherit" href="/sign-up">Sign Up</Button>
@@ -74,11 +74,11 @@ export default function Home() {
           textAlign: 'center',
           my: 4,
         }}>
-          <Typography variant="h2" gutterBottom>Welcome to Flashcard SaaS</Typography>
+          <Typography variant="h2" gutterBottom>Welcome to Recall</Typography>
           <Typography variant="h5" gutterBottom>
             The easiest way to make flashcards from your text!
           </Typography>
-          <Button variant="contained" color="primary" sx={{ mt: 2 }}>Get Started</Button>
+          <Button variant="contained" color="primary" sx={{ mt: 2 }} href="/generate">Get Started</Button>
         </Box>
         
         <Box sx={{ my: 6, width: '100%', display: 'flex', justifyContent: 'center' }}>

@@ -15,7 +15,7 @@ export default function SignUpPage() {
               Login
             </Button>
           </Link>
-          <Link href="/signup" passHref>
+          <Link href="/sign-up" passHref>
             <Button color="inherit" sx={{ ml: 2, color:'#FFFFFF' }}>
               Sign Up
             </Button>

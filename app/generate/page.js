@@ -1,7 +1,7 @@
 'use client';
 import { useUser } from '@clerk/nextjs';
 import { Container, Box, Typography, TextField, Paper, Button, CardActionArea, CardContent, DialogTitle, DialogContentText, DialogActions, Dialog, DialogContent, Grid } from '@mui/material';
-import { writeBatch, doc, collection, getDoc } from '@firebase/firestore';
+import { writeBatch, doc, collection, getDoc, setDoc } from '@firebase/firestore';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import {db} from '@/firebase'
@@ -152,11 +152,23 @@ export default function Generate() {
                             </Grid>
                         ))}
                     </Grid>
-                    <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center' }}>
-                        <Button variant="contained" color="secondary" onClick={handleOpen}>
-                            Save
-                        </Button>
-                    </Box>
+                    <Box 
+    sx={{ 
+        mt: 4, 
+        display: 'flex', 
+        justifyContent: 'center',  // Centers the buttons horizontally
+        gap: 2  // Adds space between the buttons (you can adjust the value)
+    }}
+>
+    <Button variant="contained" color="secondary" onClick={handleOpen}>
+        Save
+    </Button>
+
+    <Button variant="contained" color="secondary" href="/flashcards">
+        Saved Flashcards
+    </Button>
+</Box>
+
                 </Box>
             )}
 

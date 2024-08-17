@@ -60,7 +60,7 @@ const ResultPage = () => {
             {session?.payment_status === "paid" ? (
                 <>
                     <Typography variant="h4">Thank You for Purchasing</Typography>
-                    <Box sx={{ mt: 2 }}>
+                    <Box sx={{ mt: 22 }}>
                         <Typography variant="h6">Session ID: {session_id}</Typography>
                         <Typography variant="body1">
                             We have received your payment. You will receive an email with the order details shortly.
@@ -70,7 +70,7 @@ const ResultPage = () => {
             ) : (
                 <>
                     <Typography variant="h4">Payment Failed</Typography>
-                    <Box sx={{ mt: 2 }}>
+                    <Box sx={{ mt: 22 }}>
                         <Typography variant="h6">Session ID: {session_id}</Typography>
                         <Typography variant="body1">
                             Your payment was not successful. Please try again.
