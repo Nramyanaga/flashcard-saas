@@ -6,8 +6,8 @@ import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import { loadStripe } from '@stripe/stripe-js'; // Make sure this is imported
 
 // Make sure to replace with your actual Stripe public key
-const stripePromise = loadStripe('pk_test_51PnmgSFLF3poaRuyzeICC3rPAYKFUIN2IKWqfCp0a80vfRSYEYt8ETdLN1fSeKVIP0F76oAOjo23zWbJ8oxWytza00BAgXNah4');
 
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 export default function Home() {
 
   const handleSubmit = async () => {
